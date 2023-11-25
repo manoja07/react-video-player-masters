@@ -1,0 +1,116 @@
+body {
+  font-size: 1.6rem;
+}
+
+html{
+  font-size:62.5%;
+}
+
+@media (max-width: 600px) {
+  html {
+  font-size: 56.25%;
+  }
+}
+
+@media (max-width: 470px) {
+  html {
+    font-size: 50%;
+  }
+}
+
+.App {
+  text-align: center;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.Player {
+  position: relative;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  width: 80vw;
+  height: calc(80vw *9 / 16);
+  overflow: hidden;
+  outline: 4px solid rgba(0, 0, 0, 0.2);
+  outline-offset: 8px;
+}
+
+/*.player--heading {*/
+/*  font-size: 3rem;*/
+/*  color: #f9f9f9;*/
+/*  letter-spacing: 1px;*/
+/*  position: absolute;*/
+/*  z-index: 5;*/
+/*  margin: 2rem 1.5rem;*/
+/*  padding: .5rem;*/
+/*  top: 0;*/
+/*  display: none;*/
+/*  background: rgba(0, 0, 0, 0.3);*/
+/*}*/
+
+/*.player:fullscreen .player--heading.active {*/
+/*  display: block;*/
+/*}*/
+
+.Player:fullscreen {
+  max-width: none;
+  width: 100%;
+}
+
+.Player:-webkit-full-screen {
+  max-width: none;
+  width: 100%;
+}
+.PlayerVideo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  color: #fff;
+}
+.PlayerVideo.Rotate{
+  transform: rotateZ(90deg);
+}
+
+.MiddleIcon {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #f7f7f7;
+  opacity: .7;
+  border-radius: 10rem;
+  height: 5rem;
+  width: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.MiddleIcon svg {
+  width: 3rem;
+  height: 3rem;
+  fill:#ffd500;
+}
+.container {
+ margin-left: 120px;
+}
+/*.spinner {*/
+/*  position: fixed;*/
+/*  top: 50%;*/
+/*  left: 50%;*/
+/*  transform: translate(-50%, -50%);*/
+/*  !*background-color: #f7f7f7;*!*/
+/*  !*opacity: .7;*!*/
+/*  !*border-radius: 10rem;*!*/
+/*  !*height: 5rem;*!*/
+/*  !*width: 5rem;*!*/
+/*  display: flex;*/
+/*  justify-content: center;*/
+/*  align-items: center;*/
+/*}*/

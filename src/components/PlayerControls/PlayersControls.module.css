@@ -1,0 +1,221 @@
+.PlayerControlsContainer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  transition: all 0.4s;
+  background-color: transparent;
+}
+
+.PlayerControlsContainer:hover .PlayerControls {
+  transform: translateY(0);
+}
+
+.PlayerControls {
+  transform: translateY(100%) translateY(-.5rem);
+  transition: all 0.4s;
+  background: linear-gradient(to bottom ,rgba(0,0,0,0.01),rgba(0,0,0,0.4));
+}
+
+.PlayerTime {
+  display: flex;
+  padding: 1rem;
+  color: #fff;
+  justify-content: space-between;
+}
+
+@media (max-width: 600px) {
+  .PlayerTime {
+    padding: .5rem;
+  }
+}
+
+.Progress {
+  width: 99%;
+  margin: 0 auto;
+  position: relative;
+  cursor: pointer;
+  height: .5rem;
+}
+
+.Progress:hover .ProgressBarThumb {
+  display: block;
+}
+
+.Progress:hover .ProgressBarTimer {
+  display: block;
+}
+
+.ProgressBar {
+  -webkit-appearance: none;
+  background-color: rgba(0, 0, 0, 0.3);
+  width: 100%;
+  height: 100%;
+  border-radius: 4px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  outline: none;
+  cursor: pointer;
+  border: none;
+}
+
+.ProgressBar::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 1.5rem;
+  width: 1.5rem;
+  border-radius: 100%;
+  cursor: pointer;
+  position: relative;
+  z-index: 5;
+}
+
+.ProgressBarThumb {
+  display: none;
+  height: 1.5rem;
+  width: 1.6rem;
+  position: absolute;
+  top: -4px;
+  left: 0;
+  transform: translateX(0);
+  z-index: 2;
+}
+
+
+.ProgressBarThumbBtn {
+  height: 1.5rem;
+  width: 1.6rem;
+  background-color: #fff;
+  border-radius: 100%;
+  cursor: pointer;
+}
+
+.ProgressBarFilled {
+  width: 0;
+  height: 100%;
+  background-color: #ffd500;
+  position: absolute;
+  border-radius: 4px;
+  /*top: 1px;*/
+  left: 0;
+}
+.ProgressBarFilledLoaded {
+  width: 0;
+  height: 100%;
+  background-color: rgba(255,255,255,0.3);
+  position: absolute;
+  border-radius: 4px;
+  top: 0;
+  left: 0;
+}
+
+.PlayerOption {
+  display: flex;
+  padding: 0 2rem;
+  align-items: center;
+  margin-top: -1rem;
+}
+
+.PlayerOption svg {
+  fill: #f7f7f7;
+  cursor: pointer;
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+@media (max-width: 600px) {
+  .PlayerOption svg {
+    width: 2rem;
+    height: 2rem;
+  }
+}
+
+.PlayerOptionPlay {
+  width: 5rem !important;
+  height: 5rem !important;
+  margin: 0 auto;
+  cursor: pointer;
+  fill: #ffd500 !important;
+  transform: translateY(-3px);
+}
+
+@media (max-width: 600px) {
+  .PlayerOptionPlay {
+    width: 3rem;
+    height: 3rem;
+  }
+}
+
+.PlayerOptionFullscreen {
+  margin-left: 2.5rem;
+}
+
+.PlayerOptionSkip:not(:last-child) {
+  margin-right: 1rem;
+}
+
+.VolumeSlider {
+  width: 10rem;
+  position: relative;
+  cursor: pointer;
+  margin-left: 1rem;
+  transform: translateY(-2px);
+}
+
+.VolumeBar {
+  -webkit-appearance: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(249, 249, 249, 0.5);
+  outline: none;
+  border: none;
+  height: 4px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.VolumeBar::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 1rem;
+  width: 1rem;
+  border-radius: 100%;
+  background-color: #ffd500;
+  cursor: pointer;
+}
+/*.ProgressBarTimer {*/
+/*  position: absolute;*/
+/*  top: -3.5rem;*/
+/*  left: 0;*/
+/*  height: 3rem;*/
+/*  width: 3rem;*/
+/*  display: none;*/
+/*  color: white;*/
+/*  !*background-color: rgba(0,0,0,0.5);*!*/
+/*}*/
+
+.ProgressBarTimer {
+  position: absolute;
+  top: -16rem;
+  left: 0;
+  height: 118px;
+  transform: translateX(-50%);
+  width: 180px;
+  display: none;
+}
+
+.ProgressBarTimer span {
+  display: block;
+  text-align: center;
+  color: white;
+  font-weight: 500;
+}
+
+.ProgressBarTimer video {
+  height: 108px;
+  width: 180px;
+  background-color: black;
+  border-radius: 2px;
+  border: 3px solid white;
+}
+
